@@ -296,25 +296,6 @@ ctx.lineWidth = 2         // Grosor de línea
 
 ---
 
-## 🎯 Flujo de Funcionamiento
-
-```mermaid
-graph TD
-    A[👆 Usuario hace clic] --> B[🚀 startDrawing()]
-    B --> C[💾 Guarda estado del canvas]
-    C --> D[🖱️ Usuario mueve mouse]
-    D --> E[🎨 draw()]
-    E --> F{🎯 ¿Qué modo?}
-    F -->|Dibujo| G[✏️ Traza línea]
-    F -->|Rectángulo| H[⬜ Dibuja rectángulo temporal]
-    F -->|Borrador| I[🧹 Borra contenido]
-    G --> J[🖱️ Continúa moviendo?]
-    H --> J
-    I --> J
-    J -->|Sí| E
-    J -->|No| K[🛑 stopDrawing()]
-    K --> L[✅ Finaliza dibujo]
-```
 
 ---
 
